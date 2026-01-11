@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\begin{document}
+
+\textit{Proposed Solution to \#5820 SSMJ }\\ \\
+\textit{Solution proposed by Prakash Pant, The University of Vermont, Bardiya, Nepal.}\\ \\
+\textit{Problem proposed by Michel Bataille, Rouen, France
+} \\ \\
+\textbf{Statement of the Problem:}
+
+Let \( r,s \)  be integers with \( r \ge s \ge 0\) and let the real number x satisfy \( |x| < 1\). Show that 
+\[ \sum_{n=0}^{\infty} \binom{r+n}{s} x^n = \sum_{j=0}^{s} \binom{r}{s-j} \frac{x^j}{(1-x)^{j+1}}
+\]
+
+\textbf{Solution of the Problem:} \\
+
+We encode the binomial coefficient as follows: 
+\[ \binom{r+n}{s} = [t^s] (1+t)^{r+n}\]
+where \( [t^s] \) means the coefficient of \( t^s\). 
+Then, 
+\[\text{ L.H.S }= \sum_{n=0}^{\infty} [t^s](1+t)^{r+n} x^n\]
+Since sum of coefficients is coefficient of sum,
+\[ [t^s](1+t)^r \sum_{n=0}^{\infty} (x+xt)^n \]
+Since \(|x|< 1\) and t is an arbitrary variable which can be chosen to be small enough such that \( |x||1+t|<1\). Thus, using infinite geometric series, 
+\[ [t^s] (1+t)^r \frac{1}{1-x-xt}\]
+\[ [t^s] (1+t)^r \left(  \frac{1}{1-x} \right)  \left( \frac{1}{1-\frac{x}{1-x} t } \right) \]
+Again if t is small enough and since \( |x|<1\), \(\left| \frac{xt}{1-x} \right| < 1 \).Thus,
+\[ [t^s] (1+t)^r \left(\frac{1}{1-x} \right) \sum_{j=0}^{\infty} \frac{x^j}{(1-x)^j} t^j  \]
+\[ [t^s] \sum_{j=0}^{\infty} \frac{x^j}{(1-x)^{j+1}} (1+t)^r t^j\]
+Again, since coefficient of sum is sum of coefficients, 
+\[  \sum_{j=0}^{\infty} \frac{x^j}{(1-x)^{j
++1}} [t^s] (1+t)^r t^j  = \sum_{j=0}^{\infty} \frac{x^j}{(1-x)^{j
++1}} [t^{s-j}] (1+t)^r\]
+\[ \sum_{j=0}^{\infty} \frac{x^j}{(1-x)^{j
++1}} \binom{r}{s-j}\]
+Since \( s-j \) needs to be positive for non zero binomial coefficient, \( s-j \ge 0 \implies s \ge j \implies j \le s \) . Thus, 
+\[ \sum_{j=0}^{s} \binom{r}{s-j} \frac{x^j}{(1-x)^{j
++1}}  = \text{ R.H.S}\]
+which concludes the proof. 
+\end{document}

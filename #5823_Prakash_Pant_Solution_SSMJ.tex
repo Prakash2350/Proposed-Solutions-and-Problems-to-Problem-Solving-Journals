@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\begin{document}
+
+\textit{Proposed Solution to \#5823 SSMJ }\\ \\
+\textit{Solution proposed by Prakash Pant, The University of Vermont, Bardiya, Nepal.}\\ \\
+\textit{Problem proposed by Daniel Sitaru, National Economic College "Theodor Costescu"
+Drobeta Turnu - Severin, Romania
+} \\ \\
+\textbf{Statement of the Problem:}
+Prove that if \( 0<a \le b\), then:
+\[ \left(\int_a^b e^{-x^2} dx \right)^2 \ge \left( \int_{\frac{a+b}{2}}^{b}e^{-x^2} dx + \int_{\sqrt{ab}}^{b} e^{-x^2} dx \right)  \left( \int_{a}^{\frac{a+b}{2}}e^{-x^2} dx + \int_{a}^{\sqrt{ab}} e^{-x^2} dx \right)  \]
+
+\textbf{Solution of the Problem:} \\
+Let F(x) be the real antiderivative of \( e^{-x^2}\). Then the given problem can be restated as: 
+\[ [F(b)-F(a)]^2 \ge \left[  F(b) - F(\frac{a+b}{2}) + F(b) - F(\sqrt{ab}) \right] \left[ F(\frac{a+b}{2})-F(a)+F(\sqrt{ab})-F(a) \right] \]
+
+\[ [F(b)-F(a)]^2 \ge \left[ 2F(b) - F(\frac{a+b}{2}) - F(\sqrt{ab}) \right] \left[ F(\frac{a+b}{2})+F(\sqrt{ab})-2F(a) \right] \]
+
+\[ F^2(b)-2F(b)F(a)+F^2(a) \ge 2F(b)\left[F(\frac{a+b}{2})+F(\sqrt{ab}) \right] - 4 F(b)F(a) -\left[F(\frac{a+b}{2})+F(\sqrt{ab}) \right]^2 \] \[ 
+ + 2 F(a) \left[F(\frac{a+b}{2}) + F(\sqrt{ab}) \right] \] 
+which can be rewritten as 
+\[ \left[F(b)+F(a)\right]^2 + \left[F(\frac{a+b}{2})+F(\sqrt{ab}) \right]^2 \ge 2 \left[F(\frac{a+b}{2}) + F(\sqrt{ab}) \right] \left[F(b) + F(a) \right] 
+\]
+\[ \left[F(b)+F(a)-F(\frac{a+b}{2})-F(\sqrt{ab}) \right]^2 \ge 0  \]
+Since square of a real number cannot be negative, the given statement is true which proves the original statement we began with, hence concluding the proof. 
+
+
+
+
+
+
+ 
+\end{document}
