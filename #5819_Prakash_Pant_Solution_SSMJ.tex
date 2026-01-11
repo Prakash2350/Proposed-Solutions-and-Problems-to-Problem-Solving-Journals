@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\begin{document}
+
+\textit{Proposed Solution to \#5819 SSMJ }\\ \\
+\textit{Solution proposed by Prakash Pant, The University of Vermont, Bardiya, Nepal.}\\ \\
+\textit{Problem proposed by Toyesh Prakash Sharma, Agra College, Agra, India
+} \\ \\
+\textbf{Statement of the Problem:}
+
+For \(a, b, c \ge 0\) , show that
+\[
+\frac{a + b}{a^2 + b^2} \sqrt{ab}
++ \frac{b + c}{b^2 + c^2} \sqrt{bc}
++ \frac{c + a}{c^2 + a^2} \sqrt{ca}
+\le 3.
+\]
+
+\textbf{Solution of the Problem:} \\
+Notice that proving the following statement is enough 
+\begin{equation} \frac{a+b}{a^2+b^2}\sqrt{ab} \le 1 \end{equation}
+because other two terms in L.H.S are just the same expressions with (a,b) replaced by with (b,c) or (c,a) each of which is just a generic dummy variable \( \ge 0\). Thus, the total of the expression would be \( \le 1+1+1 = 3\)\\
+
+To prove equation (1), since \( a^2 + b^2\) is positive, we can cross-mulitply:
+
+\[ a^{\frac{3}{2}} b^{\frac{1}{2}} + b^{\frac{3}{2}}a^{\frac{1}{2}} \le a^2 +b^2\]
+which can be written as symmetric sums
+\begin{equation} \sum_{sym}a^{\frac{3}{2}}b^{\frac{1}{2}} \le \sum_{sym} a^2 b^0 \end{equation}
+To prove this statement, we use Muirhead Inequality. Since the sequence \( (\frac{3}{2},\frac{1}{2}) \prec (2,0)\), by muirhead inequality, equation (2) is true. This completes the proof. 
+
+
+
+\end{document}

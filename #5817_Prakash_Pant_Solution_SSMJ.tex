@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\begin{document}
+
+\textit{Proposed Solution to \#5817 SSMJ }\\ \\
+\textit{Solution proposed by Prakash Pant, The University of Vermont, Bardiya, Nepal.}\\ \\
+\textit{Problem Proposed by Michel Bataille, Rouen, France.
+} \\ \\
+\textbf{Statement of the Problem:}
+
+Let \((F_n)_{n \ge 0}\) be the Fibonacci sequence defined by 
+\(F_0 = 0, F_1 = 1 \) and \(F_n = F_{n-1} + F_{n-2}\) for all \(n \ge 2\). 
+If \(m, n\) are integers such that \(m \ge n \ge 0\), prove that
+\[
+\sum_{j=0}^{n} 
+\binom{m+1}{j} 
+(2^{n+1} - 2^{j}) F_j
+=
+\sum_{j=0}^{n} 
+\binom{m}{j} 
+(2^{n+1} F_{j+2} - 2^{j} F_{j+3}).
+\]
+
+\textbf{Solution of the Problem:}
+\[
+= \sum_{j=0}^{n} 
+\binom{m+1}{j} 
+(2^{n+1} - 2^{j}) F_j\]
+
+\[= \sum_{j=0}^{n} 
+\left( \binom{m}{j} + \binom{m}{j-1} \right) 
+(2^{n+1} - 2^{j}) F_j \]
+
+\[= \sum_{j=0}^{n} 
+\binom{m}{j} 
+2^{n+1} F_j +\sum_{j=0}^{n} 
+\binom{m}{j-1} 
+2^{n+1} F_j -\sum_{j=0}^{n} 
+\binom{m}{j} 
+2^{j} F_j  -\sum_{j=0}^{n} 
+\binom{m}{j-1} 
+2^{j} F_j \]
+
+\[= \sum_{j=0}^{n} 
+\binom{m}{j} 
+2^{n+1} F_j +\sum_{j=0}^{n} 
+\binom{m}{j} 
+2^{n+1} F_{j+1} -\sum_{j=0}^{n} 
+\binom{m}{j} 
+2^{j} F_j  -\sum_{j=0}^{n} 
+\binom{m}{j} 
+2^{j+1} F_{j+1} \]
+Combining first two terms and last two terms
+
+\[= \sum_{j=0}^{n} 
+\binom{m}{j} 
+2^{n+1}( F_j +F_{j+1})  -\sum_{j=0}^{n} 
+\binom{m}{j} 
+2^{j} (F_j + 2 F_{j+1})   \]
+
+Since \( F_j + F_{j+1} = F_{j+2} \) and \( F_{j} + 2F_{j+1} = F_{j+2} + F_{j+1} = F_{j+3}\), we have 
+
+\[= \sum_{j=0}^{n} 
+\binom{m}{j} 
+2^{n+1}F_{j+2}  -\sum_{j=0}^{n} 
+\binom{m}{j} 
+2^{j} F_{j+3}\]
+proving the initial claim.
+
+
+
+
+
+
+\end{document}

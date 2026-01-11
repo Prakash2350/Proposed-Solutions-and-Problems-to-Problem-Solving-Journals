@@ -1,0 +1,30 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\begin{document}
+
+\textit{Proposed Solution to \#5815 SSMJ }\\ \\
+\textit{Solution proposed by Prakash Pant, The University of Vermont, Bardiya, Nepal.}\\ \\
+\textit{Problem Proposed by Goran Conar, Varaždin, Croatia.} \\ \\
+\textbf{Statement of the Problem:}
+Let \(a, x_1, x_2, . . . , x_n \) be positive real numbers. Prove the following inequality: \\
+\[
+\left( \sum_{i=1}^{n} \frac{a^{x_i}}{x_i} \right)
+\ge
+\left( \sum_{i=1}^{n} \frac{1}{x_i} \right)
+\cdot
+a^{\frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}}.
+\]
+When does equality occur?
+
+\textbf{Solution of the Problem:}
+Rewrite the problem as : 
+
+\[\frac{\sum_{i=1}^{n} \frac{1}{x_i} a^{x_i}}{\sum_{i=1}^n \frac{1}{x_i}} \ge a ^{\frac{n}{\sum_{i=1}^n \frac{1}{x_i}}}  \]
+
+Consider function \( f(x) = a^x\) and weights \( w(x) = \frac{1}{x}\). Notice that \(f(x) = a^x \) is convex whenever x is positive as \( f''(x) = a^x \ln^2(x)\) is positive for positive x. Thus, using Jensen inequality, we can say that 
+\[ \frac{\sum_{i=1}^n w_i f(x_i)}{ \sum_{i=1}^n w_i} \ge f\left( \frac{\sum_{i=1}^n w_i x_i}{\sum_{i=1}^n w_i}\right)\]
+Using \( w_i = \frac{1}{x_i}\) and \(f(x) = a^{x} \) gives us our required result. 
+
+The equality occurs when \( x_1 = x_2 = ... = x_n\).
+
+\end{document}

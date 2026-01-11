@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\begin{document}
+
+\textit{Proposed Solution to \#5816 SSMJ }\\ \\
+\textit{Solution proposed by Prakash Pant, The University of Vermont, Bardiya, Nepal.}\\ \\
+\textit{Problem Proposed by Daniel Sitaru, National Economic College "Theodor Costescu"
+Drobeta Turnu - Severin, Romania.
+} \\ \\
+\textbf{Statement of the Problem:}
+For \(0 < a \le b \), prove:\\
+
+\[
+\int_{a}^{b} \frac{x e^{x^2} \sqrt{e^{x^2}}}{e^{3x^2} + 1} \, dx
+\le
+\frac{1}{2} \tan^{-1}\!\left(
+\frac{e^{b^2} - e^{a^2}}{1 + e^{a^2 + b^2}}
+\right).
+\]
+\textbf{Solution of the Problem:}
+Observe that : 
+\[ \frac{1}{2} \tan^{-1}\!\left(
+\frac{e^{b^2} - e^{a^2}}{1 + e^{a^2 + b^2}}
+\right) = \frac{1}{2} \left( \tan^{-1}(e^{b^2}) - \tan^{-1}(e^{a^2}) \right) = \frac{1}{2} ( \tan^{-1}(e^{x^2})) |_a^b \]
+\[  =\frac{1}{2} \int_a^b \frac{d}{dx}(\tan^{-1}(e^{x^2})) dx  =  \int_a^b \frac{xe^{x^2}}{1+e^{2x^2}} dx  \]
+Now, the problem reduces to proving 
+\[
+\int_{a}^{b} \frac{x e^{x^2} \sqrt{e^{x^2}}}{e^{3x^2} + 1} \, dx
+\le
+ \int_a^b \frac{xe^{x^2}}{1+e^{2x^2}} dx 
+\]
+for which it suffices to prove
+\[ \frac{\sqrt{e^{x^2}}}{e^{3x^2}+1} \le \frac{1}{1+e^{2x^2}} \]
+Since the denominators are clearly positive, we can cross multiply
+\begin{equation} e^{\frac{x^2}{2}} + e^{\frac{5x^2}{2}} \le e^{3x^2}+1
+\end{equation}
+To prove this statement, we use Karamata Inequality.\\ Since sequence \( (3,0) \succ (\frac{5}{2},\frac{1}{2})\) and \( f(a) = e^{ax^2}\) is convex whenever a is positive, thus by Karamata inequality, 
+\[ f(3) + f(0) \ge f(\frac{5}{2}) + f(\frac{1}{2})\]
+Using \( f(a) = e^{ax^2}\) proves equation (1) and hence the original inequality. 
+\end{document}
