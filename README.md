@@ -1,4 +1,4 @@
-# Solution to Problems from Problem Solving Journals
+# Proposed Problems and Solutions to Problem Solving Journals
 
 This repository contains solutions to problems from various problem-solving journals, such as *Crux Mathematicorum* and *School Science and Math Journal(SSMJ)*, along with proposed problems and related mathematical work.
 
